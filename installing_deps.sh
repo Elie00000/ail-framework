@@ -153,3 +153,9 @@ popd
 bash ${AIL_BIN}/LAUNCH.sh -k &
 wait
 echo ""
+
+USER=$(whoami)
+DEST_PATH="/home/$USER/ail-framework/AILENV/lib/python3.8/site-packages/libretranslatepy"
+BON_FICHIER="/home/$USER/ail-framework/api.py"
+sudo rm "$DEST_PATH/api.py"
+sudo mv "$BON_FICHIER" "$DEST_PATH"
